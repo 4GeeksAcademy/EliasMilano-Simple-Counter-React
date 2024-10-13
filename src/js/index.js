@@ -15,7 +15,19 @@ let seconds = 0;
 let app = ReactDOM.createRoot(document.getElementById('app'));
 app.render(<SecondsCounter counter={seconds}/>);
 
+let randomColor = () => {
+    const colorBase = "0123456789ABCDEF";
+    let newColor = "#";
+
+    for (let i=0; i<6; i++) {
+        newColor = newColor + colorBase[Math.floor(Math.random()*colorBase.length)];
+    }
+    return newColor;
+}
+
 setInterval(() => {
+    let color = randomColor();
     seconds++;
-    app.render(<SecondsCounter counter={seconds}/>);
+    app.render(<SecondsCounter counter={seconds} anyColor={color}/>);
+    console.log(color);
 }, 1000);
