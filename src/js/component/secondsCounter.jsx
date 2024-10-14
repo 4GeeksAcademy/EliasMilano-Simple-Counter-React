@@ -14,7 +14,7 @@ const SecondsCounter = (props) => {
     return (
         <div className="" style={{marginTop:"20vh"}}>
             <div className="d-flex justify-content-center mb-2">
-                <h1>Simple Counter!! 🕒</h1>
+                <h1>Simple Counter 🕒✨</h1>
             </div>
             <div className="d-flex ">
                 <div className="card text-bg-dark m-1" >
